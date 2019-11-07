@@ -6,4 +6,6 @@
 
 # How to Create a CRUD To-do App Using Ionic 4
 
-# 11
+# Basics of Observables
+
+# Add FIREBSE to sync your application
