@@ -7,6 +7,15 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  public todoItem = '';
+  public todoList = [];
 
+  constructor() { }
+
+  addTodoItem() {
+    if (this.todoItem.length > 0) {
+      this.todoList.push(this.todoItem);
+      this.todoItem = '';
+    }
+  }
 }

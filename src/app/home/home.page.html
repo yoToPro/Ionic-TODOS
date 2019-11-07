@@ -1,14 +1,28 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Ionic Blank
+      My TODOs
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
-  </div>
+<ion-content class="ion-no-padding">
+  <ion-item>
+    <ion-input type="text" placeholder="Enter your task" [(ngModel)]="todoItem"></ion-input>
+    <ion-button slot="end" (click)="addTodoItem()">
+      <ion-icon slot="icon-only" name="add"></ion-icon>
+    </ion-button>
+  </ion-item>
+  <ion-list class="ion-no-padding">
+    <ion-item *ngFor="let todo of todoList; let ind = index;">
+      <ion-chip slot="start">{{ ind }}</ion-chip>
+      <ion-label>{{ todo }}</ion-label>
+      <ion-button slot="end" (click)="updateTodoItem()" class="action-button edit-todo">
+        <ion-icon slot="icon-only" name="create"></ion-icon>
+      </ion-button>
+      <ion-button slot="end" (click)="deleteTodoItem()" class="action-button delete-todo">
+        <ion-icon slot="icon-only" name="trash"></ion-icon>
+      </ion-button>
+    </ion-item>
+  </ion-list>
 </ion-content>
