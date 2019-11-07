@@ -7,9 +7,9 @@
 </ion-header>
 
 <ion-content class="ion-no-padding">
-  <ion-item>
+  <ion-item class="input-todo">
     <ion-input type="text" placeholder="Enter task" [(ngModel)]="todo" #todoName></ion-input>
-    <ion-button slot="end" (click)="addTodo()">
+    <ion-button slot="end" (click)="addTodo()" class="bttn add-btn">
       <ion-icon slot="icon-only" name="add"></ion-icon>
     </ion-button>
   </ion-item>
@@ -17,10 +17,10 @@
     <ion-item *ngFor="let todo of todoList; let ind = index;">
       <ion-chip slot="start">{{ ind + 1 }}</ion-chip>
       <ion-label>{{ todo }}</ion-label>
-      <ion-button slot="end" (click)="updateTodo(ind, todo)" class="action-button edit-todo">
+      <ion-button slot="end" (click)="updateTodo(ind, todo)" class="bttn edit-btn">
         <ion-icon slot="icon-only" name="create"></ion-icon>
       </ion-button>
-      <ion-button slot="end" (click)="deleteTodo(ind)" class="action-button delete-todo">
+      <ion-button slot="end" (click)="deleteTodo(ind)" class="bttn delete-btn">
         <ion-icon slot="icon-only" name="trash"></ion-icon>
       </ion-button>
     </ion-item>

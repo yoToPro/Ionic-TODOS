@@ -1,11 +1,27 @@
 
-.action-button {
-    zoom: 0.6;
-    // --background: var(--ion-color-light);
+.input-todo {
+    --background: var(--ion-color-light);
 }
-// .edit-todo {
-//     --color: var(-ion-color-warning);
-// }
-// .delete-todo {
-//     --color: var(-ion-color-danger);
-// }
+
+.bttn {
+    zoom: 0.6;
+}
+
+.add-btn {
+    --background: var(--ion-color-tertiary);
+    --color: var(--ion-color-tertiary-contrast);
+    --background-hover: var(--ion-color-warning);
+    --color-hove: var(--ion-color-warning-contrast);
+}
+.edit-btn {
+    --background: var(--ion-color-success);
+    --color: var(--ion-color-success-contrast);
+    --background-hover: var(--ion-color-success-shade);
+    --color-hove: var(--ion-color-success-contrast);
+}
+.delete-btn {
+    --background: var(--ion-color-danger);
+    --color: var(--ion-color-danger-contrast);
+    --background-hover: var(--ion-color-danger-shade);
+    --color-hove: var(--ion-color-danger-contrast);
+}
